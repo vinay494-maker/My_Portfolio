@@ -43,7 +43,7 @@ export function Nav() {
           ))}
         </ul>
         <div className="flex items-center gap-2">
-          <a href={resume ? profile.resumePath : "#resume"} {...(resume ? { download: "Vinay_Kumar_Madhugundu_Resume.pdf" } : {})}
+          <a href={resume ? profile.resumePath : "#resume"} {...(resume ? { download: profile.resumeFileName } : {})}
             className="hidden items-center gap-2 rounded-xl bg-gradient-brand px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:brightness-110 sm:inline-flex">
             <Download className="h-4 w-4" /> Resume
           </a>
@@ -61,7 +61,7 @@ export function Nav() {
               {id}
             </a>
           ))}
-          <a href={resume ? profile.resumePath : "#resume"} onClick={() => setOpen(false)} {...(resume ? { download: true } : {})}
+          <a href={resume ? profile.resumePath : "#resume"} onClick={() => setOpen(false)} {...(resume ? { download: profile.resumeFileName } : {})}
             className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-gradient-brand px-4 py-3 text-sm font-semibold text-primary-foreground">
             <Download className="h-4 w-4" /> Download Resume
           </a>

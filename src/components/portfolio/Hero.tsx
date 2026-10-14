@@ -85,7 +85,7 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects" className={btnPrimary}>Explore My Projects <ArrowRight className="h-4 w-4" /></a>
-            <a href={resume ? profile.resumePath : "#resume"} {...(resume ? { download: "Vinay_Kumar_Madhugundu_Resume.pdf" } : {})} className={btnGhost}>
+            <a href={resume ? profile.resumePath : "#resume"} {...(resume ? { download: profile.resumeFileName } : {})} className={btnGhost}>
               <Download className="h-4 w-4" /> Download My Resume
             </a>
             <a href="#contact" className={btnGhost}><Mail className="h-4 w-4" /> Contact Me</a>
