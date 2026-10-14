@@ -10,8 +10,8 @@ function useTyping() {
   const [text, setText] = useState("");
   const [del, setDel] = useState(false);
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setText(phrases[i]); return; }
-    const full = phrases[i];
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setText(phrases[i] ?? ""); return; }
+    const full = phrases[i] ?? "";
     const t = setTimeout(() => {
       if (!del && text === full) return setDel(true);
       if (del && text === "") { setDel(false); setI((i + 1) % phrases.length); return; }
@@ -23,8 +23,8 @@ function useTyping() {
 }
 
 function CodeIllustration() {
-  const nodes = [[60, 70], [230, 40], [330, 150], [180, 190], [70, 260], [300, 300], [200, 330]];
-  const edges = [[0, 1], [1, 2], [0, 3], [3, 2], [3, 4], [4, 6], [6, 5], [2, 5], [3, 6]];
+  const nodes: [number, number][] = [[60, 70], [230, 40], [330, 150], [180, 190], [70, 260], [300, 300], [200, 330]];
+  const edges: [number, number][] = [[0, 1], [1, 2], [0, 3], [3, 2], [3, 4], [4, 6], [6, 5], [2, 5], [3, 6]];
   return (
     <div className="relative mx-auto aspect-square w-full max-w-md" aria-hidden="true">
       <div className="absolute inset-8 rounded-full bg-gradient-brand opacity-20 blur-3xl" />
