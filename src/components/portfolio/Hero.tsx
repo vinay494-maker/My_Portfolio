@@ -33,7 +33,7 @@ function CodeIllustration() {
           <linearGradient id="g" x1="0" x2="1"><stop offset="0" stopColor="var(--primary)" /><stop offset="1" stopColor="var(--violet)" /></linearGradient>
         </defs>
         {edges.map(([a, b], k) => (
-          <line key={k} x1={nodes[a][0]} y1={nodes[a][1]} x2={nodes[b][0]} y2={nodes[b][1]} stroke="url(#g)" strokeOpacity=".5" strokeWidth="1.5" className="animate-dash" />
+          <line key={k} x1={nodes[a]![0]} y1={nodes[a]![1]} x2={nodes[b]![0]} y2={nodes[b]![1]} stroke="url(#g)" strokeOpacity=".5" strokeWidth="1.5" className="animate-dash" />
         ))}
         {nodes.map(([x, y], k) => (
           <g key={k} className="animate-pulse-node" style={{ animationDelay: `${k * 0.4}s` }}>
