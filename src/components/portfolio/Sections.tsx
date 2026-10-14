@@ -272,7 +272,7 @@ export function Resume() {
             <h2 className="relative mt-4 text-3xl font-bold">Want to Know More About Me?</h2>
             <p className="relative mx-auto mt-3 max-w-xl text-muted-foreground">Explore my resume to learn more about my technical skills, projects, internships, and educational background.</p>
             {ok ? (
-              <a href={profile.resumePath} download="Vinay_Kumar_Madhugundu_Resume.pdf" className={`${btnPrimary} relative mt-8`}><Download className="h-4 w-4" /> Download Resume PDF</a>
+              <a href={profile.resumePath} download={profile.resumeFileName} className={`${btnPrimary} relative mt-8`}><Download className="h-4 w-4" /> Download Resume PDF</a>
             ) : ok === false ? (
               <p className="relative mx-auto mt-8 inline-flex items-center gap-2 rounded-xl border border-border bg-muted px-4 py-3 text-sm text-muted-foreground">
                 <FileWarning className="h-4 w-4 text-primary" /> Resume PDF not uploaded yet — add it as <code className="font-mono text-foreground">resume.pdf</code> to enable download.
