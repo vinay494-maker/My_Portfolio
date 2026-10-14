@@ -28,7 +28,7 @@ export function Nav() {
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "py-2" : "py-4"}`}>
-      <nav aria-label="Main" className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl px-4 py-2.5 transition-all ${scrolled ? "glass mx-4 lg:mx-auto" : ""}`}>
+      <nav aria-label="Main" className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl px-4 py-2.5 transition-all ${scrolled ? "glass-strong mx-4 lg:mx-auto" : ""}`}>
         <a href="#home" className="font-display text-lg font-bold">
           <span className="text-gradient">VK</span><span className="text-muted-foreground">.dev</span>
         </a>
@@ -54,7 +54,7 @@ export function Nav() {
         </div>
       </nav>
       {open && (
-        <div className="glass mx-4 mt-2 rounded-2xl p-3 lg:hidden animate-in fade-in slide-in-from-top-2">
+        <div className="glass-strong mx-4 mt-2 rounded-2xl p-3 lg:hidden animate-in fade-in slide-in-from-top-2">
           {links.map((id) => (
             <a key={id} href={`#${id}`} onClick={() => setOpen(false)}
               className={`block rounded-lg px-4 py-3 capitalize ${active === id ? "bg-accent text-foreground" : "text-muted-foreground"}`}>
