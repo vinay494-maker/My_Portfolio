@@ -1,3 +1,5 @@
+import resumeAsset from "@/assets/vinaykumar_res.pdf.asset.json";
+
 // Single source of truth for portfolio content. Fill in social URLs when confirmed.
 export const profile = {
   name: "Vinay Kumar Madhugundu",
@@ -7,5 +9,6 @@ export const profile = {
   email: "vinaym9912@gmail.com",
   linkedin: "" as string, // TODO: add confirmed LinkedIn URL
   github: "" as string, // TODO: add confirmed GitHub URL
-  resumePath: "/resume.pdf",
+  resumePath: resumeAsset.url,
+  resumeFileName: "Vinay_Kumar_Madhugundu_Resume.pdf",
 };
