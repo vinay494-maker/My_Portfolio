@@ -48,7 +48,7 @@ export function Nav() {
             <Download className="h-4 w-4" /> Resume
           </a>
           <button onClick={() => setOpen(!open)} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open}
-            className="glass grid h-10 w-10 place-items-center rounded-xl lg:hidden">
+            className="glass-strong grid h-10 w-10 place-items-center rounded-xl lg:hidden">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
