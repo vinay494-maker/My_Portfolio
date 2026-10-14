@@ -119,7 +119,7 @@ function ProjectArt({ kind }: { kind: "nn" | "lib" }) {
     const pts = L.map(([n, x]) => Array.from({ length: n }, (_, i) => [x, 100 / (n + 1) * (i + 1) * 1.6 + 10]));
     return (
       <svg viewBox="0 0 380 180" className="h-full w-full" aria-hidden="true">
-        {pts.slice(0, -1).map((col, c) => col.map(([x1, y1]) => pts[c + 1].map(([x2, y2], k) => (
+        {pts.slice(0, -1).map((col, c) => col.map(([x1, y1]) => (pts[c + 1] ?? []).map(([x2, y2], k) => (
           <line key={`${c}${x1}${y1}${k}`} x1={x1} y1={y1} x2={x2} y2={y2} stroke="var(--primary)" strokeOpacity=".3" />
         ))))}
         {pts.flat().map(([x, y], k) => <circle key={k} cx={x} cy={y} r="7" fill={k % 2 ? "var(--violet)" : "var(--primary)"} className="animate-pulse-node" style={{ animationDelay: `${k * 0.2}s` }} />)}
